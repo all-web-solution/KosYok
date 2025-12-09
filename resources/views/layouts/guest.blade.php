@@ -26,19 +26,19 @@
             --gray: #8a94a6;
             --gray-light: #e2e8f0;
             --white: #ffffff;
-            
+
             --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
             --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
             --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
             --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.18);
-            
+
             --radius-sm: 10px;
             --radius-md: 16px;
             --radius-lg: 24px;
             --radius-xl: 32px;
             --radius-full: 50%;
-            
+
             --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -627,11 +627,11 @@
             .login-card {
                 padding: 2rem 1.5rem;
             }
-            
+
             .login-title {
                 font-size: 1.5rem;
             }
-            
+
             .social-login {
                 grid-template-columns: 1fr;
             }
@@ -643,13 +643,13 @@
                 gap: 1rem;
                 text-align: center;
             }
-            
+
             .form-options {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
             }
-            
+
             .home-link {
                 margin-top: 0.5rem;
             }
@@ -697,7 +697,7 @@
                     <span>Dashboard Management</span>
                 </div>
             </a>
-            
+
             <a href="{{ url('/') }}" class="home-link">
                 <i class="fas fa-arrow-left"></i> Kembali ke Beranda
             </a>
@@ -711,23 +711,23 @@
     <footer class="login-footer">
         <p>&copy; 2024 Kos Melati Indah Dashboard. Hak cipta dilindungi.</p>
         <p style="margin-top: 0.5rem; font-size: 0.8rem;">
-            <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 0.5rem;">Kebijakan Privasi</a> | 
-            <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 0.5rem;">Syarat & Ketentuan</a> | 
+            <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 0.5rem;">Kebijakan Privasi</a> |
+            <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 0.5rem;">Syarat & Ketentuan</a> |
             <a href="#" style="color: var(--primary); text-decoration: none; margin: 0 0.5rem;">Bantuan</a>
         </p>
     </footer>
 
     <!-- Livewire Scripts -->
     @livewireScripts
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize password toggle
             setupPasswordToggle();
-            
+
             // Check for saved credentials
             checkRememberedUser();
-            
+
             // Livewire specific setup
             setupLivewireListeners();
         });
@@ -737,11 +737,11 @@
             const passwordToggle = document.getElementById('passwordToggle');
             if (passwordToggle) {
                 const passwordInput = document.getElementById('password');
-                
+
                 passwordToggle.addEventListener('click', function() {
                     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
                     passwordInput.setAttribute('type', type);
-                    
+
                     // Toggle icon
                     const icon = this.querySelector('i');
                     icon.className = type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
@@ -755,7 +755,7 @@
             if (rememberedEmail) {
                 const emailInput = document.getElementById('email');
                 const rememberCheckbox = document.getElementById('remember');
-                
+
                 if (emailInput) emailInput.value = rememberedEmail;
                 if (rememberCheckbox) rememberCheckbox.checked = true;
             }
@@ -766,21 +766,21 @@
             // Listen for Livewire loading state
             Livewire.hook('request', ({ uri, options, payload, respond, succeed, fail }) => {
                 showLoading();
-                
+
                 succeed(({ status, json }) => {
                     hideLoading();
-                    
+
                     // Save email to localStorage if "Remember me" is checked
                     const emailInput = document.getElementById('email');
                     const rememberCheckbox = document.getElementById('remember');
-                    
+
                     if (rememberCheckbox && rememberCheckbox.checked && emailInput) {
                         localStorage.setItem('kosMelati_rememberedEmail', emailInput.value);
                     } else {
                         localStorage.removeItem('kosMelati_rememberedEmail');
                     }
                 });
-                
+
                 fail(() => {
                     hideLoading();
                 });
@@ -807,11 +807,11 @@
         function showSuccessMessage(message) {
             const successMessage = document.getElementById('successMessage');
             const successText = document.getElementById('successText');
-            
+
             if (successMessage && successText) {
                 successText.textContent = message;
                 successMessage.classList.add('show');
-                
+
                 setTimeout(() => {
                     successMessage.classList.remove('show');
                 }, 3000);
@@ -846,7 +846,7 @@
                     form.dispatchEvent(new Event('submit'));
                 }
             }
-            
+
             // Focus on password field when / is pressed
             if (e.key === '/' && e.target.tagName !== 'INPUT') {
                 e.preventDefault();

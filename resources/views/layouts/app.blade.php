@@ -37,45 +37,45 @@
                     </div>
                 </div>
             </div>
-            
+
             <nav class="p-4 space-y-2">
-                <a href="{{ route('admin.dashboard') }}" 
+                <a href="{{ route('admin.dashboard') }}"
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.dashboard') ? 'bg-gray-700' : '' }}">
                     <i class="fas fa-chart-bar w-5"></i>
                     <span>Dashboard</span>
                 </a>
-                
-                <a href="{{ route('admin.kamars') }}" 
+
+                <a href="{{ route('admin.kamars') }}"
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.kamars') ? 'bg-gray-700' : '' }}">
                     <i class="fas fa-door-closed w-5"></i>
                     <span>Kamar</span>
                 </a>
-                
-                <a href="{{ route('admin.bookings') }}" 
+
+                <a href="{{ route('admin.bookings') }}"
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.bookings') ? 'bg-gray-700' : '' }}">
                     <i class="fas fa-calendar-check w-5"></i>
                     <span>Booking</span>
                 </a>
-                
-                <a href="{{ route('admin.payments') }}" 
+
+                <a href="{{ route('admin.payments') }}"
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.payments') ? 'bg-gray-700' : '' }}">
                     <i class="fas fa-wallet w-5"></i>
                     <span>Pembayaran</span>
                 </a>
-                
-                <a href="{{ route('admin.users') }}" 
+
+                <a href="{{ route('admin.users') }}"
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.users') ? 'bg-gray-700' : '' }}">
                     <i class="fas fa-users w-5"></i>
                     <span>User</span>
                 </a>
-                
-                <a href="{{ route('admin.reports') }}" 
+
+                <a href="{{ route('admin.reports') }}"
                    class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.reports') ? 'bg-gray-700' : '' }}">
                     <i class="fas fa-chart-pie w-5"></i>
                     <span>Laporan</span>
                 </a>
             </nav>
-            
+
             <div class="absolute bottom-0 w-full p-4 border-t border-gray-700">
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -86,7 +86,7 @@
                 </form>
             </div>
         </aside>
-        
+
         <!-- Main Content -->
         <main class="ml-64 flex-1 p-6">
             <!-- Header -->
@@ -104,7 +104,7 @@
                     </ol>
                 </nav>
             </div>
-            
+
             <!-- Content -->
             @if(session()->has('message'))
             <div class="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center justify-between">
@@ -117,11 +117,11 @@
                 </button>
             </div>
             @endif
-            
+
             @yield('content')
         </main>
     </div>
-    
+
     @livewireScripts
     <script>
         // Notification handler
@@ -134,9 +134,9 @@
                     <span>${event.detail.message}</span>
                 </div>
             `;
-            
+
             document.body.appendChild(notification);
-            
+
             setTimeout(() => {
                 notification.remove();
             }, 3000);

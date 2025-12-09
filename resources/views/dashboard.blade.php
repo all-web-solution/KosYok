@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -27,19 +27,19 @@
             --sidebar-width: 250px;
             --sidebar-collapsed: 70px;
             --header-height: 70px;
-            
+
             --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
             --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
             --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
             --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.18);
-            
+
             --radius-sm: 10px;
             --radius-md: 16px;
             --radius-lg: 24px;
             --radius-xl: 32px;
             --radius-full: 50%;
-            
+
             --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -743,23 +743,23 @@
             .sidebar {
                 transform: translateX(-100%);
             }
-            
+
             .sidebar.active {
                 transform: translateX(0);
             }
-            
+
             .main-content {
                 margin-left: 0;
             }
-            
+
             .main-header {
                 padding: 0 1rem;
             }
-            
+
             .search-input {
                 width: 200px;
             }
-            
+
             .charts-grid {
                 grid-template-columns: 1fr;
             }
@@ -769,15 +769,15 @@
             .content-wrapper {
                 padding: 1rem;
             }
-            
+
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .search-input {
                 width: 150px;
             }
-            
+
             .user-info {
                 display: none;
             }
@@ -787,11 +787,11 @@
             .stats-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .search-box {
                 display: none;
             }
-            
+
             .header-left h1 {
                 font-size: 1.2rem;
             }
@@ -824,7 +824,7 @@
             <div class="sidebar-toggle" onclick="toggleSidebar()">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            
+
             <div class="sidebar-header">
                 <div class="logo-admin">
                     <i class="fas fa-home"></i>
@@ -833,14 +833,14 @@
                     Kos Melati Indah
                 </div>
             </div>
-            
+
             <div class="sidebar-menu">
                 <div class="menu-section">UTAMA</div>
                 <a href="#" class="menu-item active">
                     <i class="fas fa-tachometer-alt"></i>
                     <span class="menu-text">Dashboard</span>
                 </a>
-                
+
                 <div class="menu-section">MANAJEMEN</div>
                 <a href="#" class="menu-item">
                     <i class="fas fa-bed"></i>
@@ -857,7 +857,7 @@
                     <span class="menu-text">Pembayaran</span>
                     <span class="menu-badge">3</span>
                 </a>
-                
+
                 <div class="menu-section">LAINNYA</div>
                 <a href="#" class="menu-item">
                     <i class="fas fa-cog"></i>
@@ -871,9 +871,9 @@
                     <i class="fas fa-question-circle"></i>
                     <span class="menu-text">Bantuan</span>
                 </a>
-                
+
                 <div class="menu-divider"></div>
-                
+
                 <a href="#" class="menu-item" onclick="logout()">
                     <i class="fas fa-sign-out-alt"></i>
                     <span class="menu-text">Keluar</span>
@@ -888,18 +888,18 @@
                 <div class="header-left">
                     <h1>Dashboard Admin</h1>
                 </div>
-                
+
                 <div class="header-actions">
                     <div class="search-box">
                         <i class="fas fa-search search-icon"></i>
                         <input type="text" class="search-input" placeholder="Cari...">
                     </div>
-                    
+
                     <div class="notification-bell" onclick="showNotifications()">
                         <i class="fas fa-bell"></i>
                         <span class="notification-badge">3</span>
                     </div>
-                    
+
                     <div class="user-profile" onclick="toggleUserMenu()">
                         <div class="user-avatar">
                             A
@@ -932,7 +932,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="stat-card">
                         <div class="stat-content">
                             <div class="stat-info">
@@ -948,7 +948,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="stat-card">
                         <div class="stat-content">
                             <div class="stat-info">
@@ -964,7 +964,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="stat-card">
                         <div class="stat-content">
                             <div class="stat-info">
@@ -990,21 +990,21 @@
                         </div>
                         <div class="action-text">Tambah Kamar</div>
                     </div>
-                    
+
                     <div class="action-btn" onclick="openModal('addTenant')">
                         <div class="action-icon">
                             <i class="fas fa-user-plus"></i>
                         </div>
                         <div class="action-text">Tambah Penghuni</div>
                     </div>
-                    
+
                     <div class="action-btn" onclick="openModal('addPayment')">
                         <div class="action-icon">
                             <i class="fas fa-credit-card"></i>
                         </div>
                         <div class="action-text">Input Pembayaran</div>
                     </div>
-                    
+
                     <div class="action-btn" onclick="generateReport()">
                         <div class="action-icon">
                             <i class="fas fa-file-export"></i>
@@ -1027,7 +1027,7 @@
                             <canvas id="revenueChart"></canvas>
                         </div>
                     </div>
-                    
+
                     <div class="chart-card">
                         <div class="chart-header">
                             <h3>Status Kamar</h3>
@@ -1044,7 +1044,7 @@
                         <h3>Aktivitas Terbaru</h3>
                         <a href="#" style="color: var(--primary); text-decoration: none; font-size: 0.9rem;">Lihat Semua</a>
                     </div>
-                    
+
                     <div class="activity-item">
                         <div class="activity-icon">
                             <i class="fas fa-money-bill-wave"></i>
@@ -1054,7 +1054,7 @@
                             <div class="activity-time">10 menit yang lalu</div>
                         </div>
                     </div>
-                    
+
                     <div class="activity-item">
                         <div class="activity-icon">
                             <i class="fas fa-user-plus"></i>
@@ -1064,7 +1064,7 @@
                             <div class="activity-time">1 jam yang lalu</div>
                         </div>
                     </div>
-                    
+
                     <div class="activity-item">
                         <div class="activity-icon">
                             <i class="fas fa-tools"></i>
@@ -1074,7 +1074,7 @@
                             <div class="activity-time">3 jam yang lalu</div>
                         </div>
                     </div>
-                    
+
                     <div class="activity-item">
                         <div class="activity-icon">
                             <i class="fas fa-calendar-check"></i>
@@ -1175,7 +1175,7 @@
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Nomor Kamar</label>
                         <input type="text" class="form-control" placeholder="Contoh: 101" required>
                     </div>
-                    
+
                     <div style="margin-bottom: 1rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Tipe Kamar</label>
                         <select class="form-control" required>
@@ -1185,12 +1185,12 @@
                             <option value="vip">VIP</option>
                         </select>
                     </div>
-                    
+
                     <div style="margin-bottom: 1rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Harga per Bulan</label>
                         <input type="number" class="form-control" placeholder="Contoh: 1200000" required>
                     </div>
-                    
+
                     <div style="margin-bottom: 1rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Fasilitas</label>
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">
@@ -1208,7 +1208,7 @@
                             </label>
                         </div>
                     </div>
-                    
+
                     <button type="submit" class="btn-primary" style="width: 100%; padding: 0.8rem; margin-top: 1rem;">
                         <i class="fas fa-save"></i> Simpan Kamar
                     </button>
@@ -1230,12 +1230,12 @@
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Nama Lengkap</label>
                         <input type="text" class="form-control" placeholder="Nama penghuni" required>
                     </div>
-                    
+
                     <div style="margin-bottom: 1rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">No. WhatsApp</label>
                         <input type="tel" class="form-control" placeholder="0812xxxxxxx" required>
                     </div>
-                    
+
                     <div style="margin-bottom: 1rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Kamar</label>
                         <select class="form-control" required>
@@ -1245,12 +1245,12 @@
                             <option value="103">Kamar 103 - VIP</option>
                         </select>
                     </div>
-                    
+
                     <div style="margin-bottom: 1rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Tanggal Masuk</label>
                         <input type="date" class="form-control" required>
                     </div>
-                    
+
                     <button type="submit" class="btn-primary" style="width: 100%; padding: 0.8rem; margin-top: 1rem;">
                         <i class="fas fa-user-plus"></i> Tambah Penghuni
                     </button>
@@ -1276,7 +1276,7 @@
                         <div class="activity-time">2 hari yang lalu</div>
                     </div>
                 </div>
-                
+
                 <div class="activity-item">
                     <div class="activity-icon" style="background: #4ecdc4; color: white;">
                         <i class="fas fa-calendar-check"></i>
@@ -1286,7 +1286,7 @@
                         <div class="activity-time">Hari ini, 10:30</div>
                     </div>
                 </div>
-                
+
                 <div class="activity-item">
                     <div class="activity-icon" style="background: #ffd166; color: white;">
                         <i class="fas fa-tools"></i>
@@ -1296,7 +1296,7 @@
                         <div class="activity-time">Kemarin, 15:45</div>
                     </div>
                 </div>
-                
+
                 <div style="text-align: center; margin-top: 1rem;">
                     <a href="#" style="color: var(--primary); text-decoration: none;">Tandai semua telah dibaca</a>
                 </div>
@@ -1386,10 +1386,10 @@
             const sidebar = document.getElementById('sidebar');
             const mainContent = document.getElementById('mainContent');
             const toggleIcon = document.querySelector('.sidebar-toggle i');
-            
+
             sidebar.classList.toggle('collapsed');
             mainContent.classList.toggle('expanded');
-            
+
             if (sidebar.classList.contains('collapsed')) {
                 toggleIcon.className = 'fas fa-chevron-right';
             } else {
@@ -1417,7 +1417,7 @@
                     modalId = 'addPaymentModal';
                     break;
             }
-            
+
             if (modalId) {
                 document.getElementById(modalId).style.display = 'flex';
             }
@@ -1511,7 +1511,7 @@
                 e.preventDefault();
                 document.querySelector('.search-input')?.focus();
             }
-            
+
             // Esc to close modals
             if (e.key === 'Escape') {
                 const modals = document.querySelectorAll('.modal');
@@ -1532,4 +1532,4 @@
         });
     </script>
 </body>
-</html> --}}
+</html>

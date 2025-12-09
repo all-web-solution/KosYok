@@ -31,19 +31,19 @@
             --sidebar-width: 280px;
             --sidebar-collapsed: 80px;
             --header-height: 70px;
-            
+
             --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.05);
             --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
             --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
             --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.15);
             --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.18);
-            
+
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
             --radius-xl: 20px;
             --radius-full: 9999px;
-            
+
             --transition-fast: 0.15s ease;
             --transition-base: 0.3s ease;
             --transition-slow: 0.5s ease;
@@ -1075,7 +1075,7 @@
             .livewire-charts {
                 grid-template-columns: 1fr;
             }
-            
+
             .chart-wrapper {
                 height: 250px;
             }
@@ -1093,26 +1093,26 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-            
+
             .stat-card {
                 padding: 1rem;
                 min-height: 110px;
             }
-            
+
             .stat-value {
                 font-size: 1.4rem;
             }
-            
+
             .stat-icon {
                 width: 42px;
                 height: 42px;
                 font-size: 1.1rem;
             }
-            
+
             .livewire-content {
                 padding: 1rem;
             }
-            
+
             .chart-container {
                 padding: 1.25rem;
             }
@@ -1125,65 +1125,65 @@
                 width: 280px;
                 box-shadow: var(--shadow-xl);
             }
-            
+
             .livewire-sidebar.active {
                 transform: translateX(0);
             }
-            
+
             .livewire-main {
                 margin-left: 0 !important;
                 width: 100% !important;
             }
-            
+
             .livewire-header {
                 padding: 0 1rem;
                 height: 60px;
             }
-            
+
             .mobile-menu-toggle {
                 display: flex;
             }
-            
+
             .page-title h1 {
                 font-size: 1.25rem;
             }
-            
+
             .user-info {
                 display: none;
             }
-            
+
             .search-input {
                 width: 150px;
             }
-            
+
             .livewire-content {
                 padding: 1rem 0.75rem;
             }
-            
+
             .chart-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            
+
             .chart-wrapper {
                 height: 200px;
             }
-            
+
             .activity-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            
+
             .table-header {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 1rem;
             }
-            
+
             .table th, .table td {
                 padding: 0.75rem 0.5rem;
             }
-            
+
             .modal-content {
                 margin: 1rem;
                 max-height: 85vh;
@@ -1196,62 +1196,62 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.75rem;
             }
-            
+
             .stat-card {
                 padding: 0.875rem;
                 min-height: 100px;
             }
-            
+
             .stat-header {
                 margin-bottom: 0.5rem;
             }
-            
+
             .stat-title {
                 font-size: 0.7rem;
             }
-            
+
             .stat-trend {
                 font-size: 0.6rem;
                 padding: 0.1rem 0.3rem;
             }
-            
+
             .stat-value {
                 font-size: 1.25rem;
             }
-            
+
             .stat-icon {
                 width: 36px;
                 height: 36px;
                 font-size: 1rem;
             }
-            
+
             .search-input {
                 display: none;
             }
-            
+
             .header-tools {
                 gap: 0.5rem;
             }
-            
+
             .notification-btn {
                 width: 36px;
                 height: 36px;
                 font-size: 1rem;
             }
-            
+
             .user-avatar {
                 width: 36px;
                 height: 36px;
             }
-            
+
             .quick-actions-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .action-card {
                 padding: 1rem;
             }
-            
+
             .action-icon {
                 width: 42px;
                 height: 42px;
@@ -1265,73 +1265,73 @@
                 grid-template-columns: repeat(3, 1fr);
                 gap: 0.5rem;
             }
-            
+
             .stat-card {
                 padding: 0.75rem;
                 min-height: 90px;
                 border-radius: var(--radius-md);
             }
-            
+
             .stat-value {
                 font-size: 1rem;
             }
-            
+
             .stat-icon {
                 width: 32px;
                 height: 32px;
                 font-size: 0.875rem;
                 border-radius: var(--radius-sm);
             }
-            
+
             .stat-title {
                 font-size: 0.65rem;
                 margin-bottom: 0.25rem;
             }
-            
+
             .stat-trend {
                 display: none; /* Sembunyikan trend di HP kecil untuk menghemat ruang */
             }
-            
+
             .page-title h1 {
                 font-size: 1.1rem;
             }
-            
+
             .page-subtitle {
                 font-size: 0.75rem;
             }
-            
+
             .chart-container {
                 padding: 1rem;
             }
-            
+
             .livewire-activity {
                 padding: 1rem;
             }
-            
+
             .activity-item {
                 padding: 0.75rem;
             }
-            
+
             .activity-icon {
                 width: 32px;
                 height: 32px;
                 font-size: 0.875rem;
                 margin-right: 0.75rem;
             }
-            
+
             .quick-actions-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.75rem;
             }
-            
+
             .action-card {
                 padding: 1rem;
             }
-            
+
             .action-title {
                 font-size: 0.9rem;
             }
-            
+
             .action-desc {
                 font-size: 0.75rem;
             }
@@ -1343,34 +1343,34 @@
                 grid-template-columns: repeat(3, 1fr);
                 gap: 0.4rem;
             }
-            
+
             .stat-card {
                 padding: 0.6rem;
                 min-height: 85px;
             }
-            
+
             .stat-value {
                 font-size: 0.9rem;
             }
-            
+
             .stat-icon {
                 width: 28px;
                 height: 28px;
                 font-size: 0.8rem;
             }
-            
+
             .stat-title {
                 font-size: 0.6rem;
             }
-            
+
             .page-title h1 {
                 font-size: 1rem;
             }
-            
+
             .page-subtitle {
                 font-size: 0.7rem;
             }
-            
+
             .quick-actions-grid {
                 grid-template-columns: 1fr;
             }
@@ -1393,7 +1393,7 @@
             .d-md-none {
                 display: none !important;
             }
-            
+
             .d-md-flex {
                 display: flex !important;
             }
@@ -1414,6 +1414,137 @@
         .sidebar-overlay.active {
             display: block;
         }
+        .table-header button{
+            border: none;
+            cursor: pointer;
+
+        }
+        /* 1. Modal Overlay (Latar Belakang Gelap) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Hitam transparan */
+    z-index: 1000;
+
+    /* State Awal: Tersembunyi */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; /* Animasi Halus */
+
+    /* Flexbox untuk menengahkan modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Modal Container (Kotak Putih) */
+.modal-container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 800px; /* Lebar maksimal */
+    max-height: 90vh; /* Agar tidak melebihi tinggi layar */
+    overflow-y: auto; /* Scroll jika konten terlalu panjang */
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 25px;
+
+    /* State Awal Animasi: Sedikit lebih kecil dan transparan */
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 3. Class Aktif (Untuk memunculkan Modal) */
+.modal-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay.is-visible .modal-container {
+    transform: scale(1); /* Kembali ke ukuran normal */
+    opacity: 1;
+}
+
+/* --- Styling Tambahan untuk Form agar Rapi --- */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Kolom */
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full-width {
+    grid-column: span 2; /* Elemen ini mengambil 2 kolom */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Agar padding tidak merusak lebar */
+    font-family: inherit;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-primary { background-color: #007bff; color: white; }
+.btn-primary:hover { background-color: #0056b3; }
+
+.btn-secondary { background-color: #6c757d; color: white; }
+.btn-secondary:hover { background-color: #545b62; }
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+}
+.btn-close:hover { color: #333; }
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 600px) {
+    .form-grid { grid-template-columns: 1fr; } /* Jadi 1 kolom di HP */
+    .form-group.full-width { grid-column: span 1; }
+}
     </style>
 </head>
 <body>
@@ -1434,15 +1565,15 @@
         <main class="livewire-main" id="mainContent" x-bind:class="sidebarCollapsed ? 'expanded' : ''">
             <!-- Header -->
             @include('components.layouts.header')
-            
+
             <!-- Content -->
             {{$slot}}
         </main>
     </div>
 
-    
 
-    <script>
+
+<script>
         // Simulasi Livewire dengan Alpine.js
         function livewireDashboard() {
             return {
@@ -1459,34 +1590,34 @@
                 selectedYear: '2024',
                 revenueChart: null,
                 roomChart: null,
-                
+
                 // Methods
                 init() {
                     this.initCharts();
-                    
+
                     // Inisialisasi untuk mobile
                     this.checkMobile();
-                    
+
                     // Event listeners
                     window.addEventListener('resize', () => {
                         this.checkMobile();
                         this.updateChartLegend();
                     });
-                    
+
                     document.addEventListener('keydown', (e) => {
                         if (e.ctrlKey && e.key === 'k') {
                             e.preventDefault();
                             const searchInput = document.querySelector('.search-input');
                             if (searchInput) searchInput.focus();
                         }
-                        
+
                         if (e.key === 'Escape') {
                             this.closeAllModals();
                             this.hideMobileSidebar();
                         }
                     });
                 },
-                
+
                 checkMobile() {
                     if (window.innerWidth <= 768) {
                         this.sidebarCollapsed = false;
@@ -1495,7 +1626,7 @@
                         document.getElementById('sidebarOverlay').classList.remove('active');
                     }
                 },
-                
+
                 initCharts() {
                     // Revenue Chart
                     const revenueCtx = document.getElementById('revenueChart').getContext('2d');
@@ -1554,15 +1685,15 @@
                     // Room Status Chart
                     this.updateChartLegend();
                 },
-                
+
                 updateChartLegend() {
                     const isMobile = window.innerWidth <= 768;
                     const legendPosition = isMobile ? 'bottom' : 'right';
-                    
+
                     if (this.roomChart) {
                         this.roomChart.destroy();
                     }
-                    
+
                     const roomCtx = document.getElementById('roomStatusChart').getContext('2d');
                     this.roomChart = new Chart(roomCtx, {
                         type: 'doughnut',
@@ -1598,21 +1729,21 @@
                         }
                     });
                 },
-                
+
                 updateChart() {
                     // Simulasi update chart berdasarkan tahun yang dipilih
                     console.log('Memperbarui chart untuk tahun:', this.selectedYear);
-                    
+
                     // Dalam implementasi nyata, ini akan memanggil Livewire untuk data baru
                     if (this.selectedYear === '2023') {
                         this.revenueChart.data.datasets[0].data = [10.5, 11.2, 11.8, 12.5, 13.0, 13.8];
                     } else {
                         this.revenueChart.data.datasets[0].data = [12.5, 13.2, 14.1, 14.8, 15.2, 16.5];
                     }
-                    
+
                     this.revenueChart.update();
                 },
-                
+
                 toggleSidebar() {
                     if (window.innerWidth <= 768) {
                         this.toggleMobileSidebar();
@@ -1620,7 +1751,7 @@
                         this.sidebarCollapsed = !this.sidebarCollapsed;
                     }
                 },
-                
+
                 toggleMobileSidebar() {
                     this.mobileSidebarActive = !this.mobileSidebarActive;
                     const overlay = document.getElementById('sidebarOverlay');
@@ -1632,42 +1763,42 @@
                         document.body.style.overflow = 'auto';
                     }
                 },
-                
+
                 hideMobileSidebar() {
                     this.mobileSidebarActive = false;
                     document.getElementById('sidebarOverlay').classList.remove('active');
                     document.body.style.overflow = 'auto';
                 },
-                
+
                 openModal(modalType) {
                     const modalId = modalType + 'Modal';
                     document.getElementById(modalId).style.display = 'flex';
                 },
-                
+
                 closeModal(modalId) {
                     document.getElementById(modalId).style.display = 'none';
                 },
-                
+
                 closeAllModals() {
                     const modals = document.querySelectorAll('.livewire-modal');
                     modals.forEach(modal => {
                         modal.style.display = 'none';
                     });
                 },
-                
+
                 showNotifications() {
                     this.openModal('notifications');
                 },
-                
+
                 toggleUserMenu() {
                     // Simulasi dropdown menu
                     alert('Menu pengguna akan ditampilkan di sini');
                 },
-                
+
                 openMobileSearch() {
                     this.openModal('mobileSearch');
                 },
-                
+
                 performSearch() {
                     if (this.searchQuery.trim()) {
                         this.showLoading();
@@ -1678,7 +1809,7 @@
                         }, 500);
                     }
                 },
-                
+
                 logout() {
                     if (confirm('Apakah Anda yakin ingin keluar?')) {
                         this.showLoading();
@@ -1688,7 +1819,7 @@
                         }, 1000);
                     }
                 },
-                
+
                 generateReport() {
                     this.showLoading();
                     setTimeout(() => {
@@ -1696,17 +1827,17 @@
                         alert('Laporan berhasil digenerate! File akan diunduh.');
                     }, 1500);
                 },
-                
+
                 markAllAsRead() {
                     this.unreadNotifications = 0;
                     this.closeModal('notificationsModal');
                     alert('Semua notifikasi telah ditandai sebagai dibaca');
                 },
-                
+
                 viewPayment(id) {
                     alert('Menampilkan detail pembayaran ID: ' + id);
                 },
-                
+
                 approvePayment(id) {
                     if (confirm('Setujui pembayaran ini?')) {
                         this.showLoading();
@@ -1716,15 +1847,15 @@
                         }, 500);
                     }
                 },
-                
+
                 printReceipt(id) {
                     alert('Mencetak struk untuk pembayaran ID: ' + id);
                 },
-                
+
                 reprocessPayment(id) {
                     alert('Memproses ulang pembayaran ID: ' + id);
                 },
-                
+
                 submitRoomForm() {
                     this.showLoading();
                     setTimeout(() => {
@@ -1735,7 +1866,7 @@
                         alert('Kamar berhasil ditambahkan!');
                     }, 1000);
                 },
-                
+
                 submitTenantForm() {
                     this.showLoading();
                     setTimeout(() => {
@@ -1746,16 +1877,52 @@
                         alert('Penghuni berhasil ditambahkan!');
                     }, 1000);
                 },
-                
+
                 showLoading() {
                     document.getElementById('loadingOverlay').style.display = 'flex';
                 },
-                
+
                 hideLoading() {
                     document.getElementById('loadingOverlay').style.display = 'none';
                 }
             };
         }
-    </script>
+
+        // Fungsi untuk memunculkan modal
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        // Menambahkan class 'is-visible' untuk memicu transisi CSS
+        modal.classList.add('is-visible');
+    }
+}
+
+// Fungsi untuk menyembunyikan modal
+function hideModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        // Menghapus class 'is-visible' untuk memicu transisi hilang
+        modal.classList.remove('is-visible');
+    }
+}
+
+// Opsional: Menutup modal jika user klik di area gelap (overlay)
+document.addEventListener('click', function (event) {
+    // Cek jika yang diklik adalah overlay (bukan kotak putihnya)
+    if (event.target.classList.contains('modal-overlay')) {
+        // Ambil ID dari elemen tersebut dan sembunyikan
+        hideModal(event.target.id);
+    }
+});
+
+
+    document.addEventListener('livewire:initialized', () => {
+       @this.on('close-modal', (event) => {
+           // Panggil fungsi hideModal yang sudah kamu buat sebelumnya
+           hideModal('modalCreateKamar'); // Sesuaikan ID modal kamu
+       });
+    });
+
+</script>
 </body>
 </html>
