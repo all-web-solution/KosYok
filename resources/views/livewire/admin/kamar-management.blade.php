@@ -25,7 +25,7 @@
             <div class="modal-container">
                 <div class="form-header">
                     <h2 style="margin:0;">Tambah Kamar Kost</h2>
-                    <button class="btn-close" >&times;</button>
+                    <button class="btn-close" onclick="hideModal('modalCreateKamar')">&times;</button>
                 </div>
 
                 <form wire:submit.prevent="store">

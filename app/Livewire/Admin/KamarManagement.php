@@ -10,58 +10,41 @@ use Livewire\WithPagination;
 class KamarManagement extends Component
 {
     use WithFileUploads;
-    public $name;
-    public $number;
-    public $status;
-    public $facility;
-    public $harga3bulan;
-    public $harga6bulan;
-    public $harga1tahun;
+    use WithPagination;
+
+    protected $paginationTheme = 'bootstrap';
+
+    public $name = '';
+    public $number = '';
+    public $status = '';
+    public $facility = '';
+    public $harga3bulan = '';
+    public $harga6bulan = '';
+    public $harga1tahun = '';
     public $image;
-    public $description;
-    public $showModal = false;
+    public $description = '';
 
-public function openModal()
-{
-    $this->showModal = true;
-}
+    protected $rules = [
+        'number' => 'required|string|max:50',
+        'name' => 'required|string|max:100',
+        'status' => 'required',
+        'facility' => 'required|string',
+        'harga3bulan' => 'required|numeric',
+        'harga6bulan' => 'nullable|numeric',
+        'harga1tahun' => 'nullable|numeric',
+        'description' => 'nullable|string',
+        'image' => 'nullable|image|max:2048',
+    ];
 
-public function closeModal()
-{
-    $this->showModal = false;
-}
     public function render()
     {
-        return view('livewire.admin.kamar-management',[
-            'kamars' => Kamar::latest()->paginate(10)
+        return view('livewire.admin.kamar-management', [
+            'kamars' => Kamar::latest()->paginate(10),
         ]);
     }
 
-    public function store()
-{
-    // $this->validate();
-
-    // $imagePath = null;
-    // if ($this->image) {
-    //     $imagePath = $this->image->store('kamar', 'public');
-    // }
-
-    // Kamar::create([
-    //     'nomor_kamar' => $this->number,
-    //     'nama_kamar' => $this->name,
-    //     'status' => $this->status,
-    //     'fasilitas' => $this->facility,
-    //     'harga_3bulan' => $this->harga3bulan,
-    //     'harga_6bulan' => $this->harga6bulan,
-    //     'harga_1tahun' => $this->harga1tahun,
-    //     'foto' => $imagePath,
-    //     'deskripsi' => $this->description,
-    // ]);
-
-    // $this->reset();
-    // $this->dispatch('close-modal');
-
-    dd("masuk store");
-}
-
+    public function createNewRoom()
+    {
+        dd($this->all());
+    }
 }

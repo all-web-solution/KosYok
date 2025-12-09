@@ -7,7 +7,7 @@
             Kos Melati Indah
         </div>
     </div>
-    
+
     <nav class="nav-menu">
         <div class="nav-section">NAVIGASI UTAMA</div>
         <div class="nav-item">
@@ -16,7 +16,7 @@
                 <span class="nav-label">Dashboard</span>
             </a>
         </div>
-        
+
         <div class="nav-section">MANAJEMEN</div>
         <div class="nav-item">
             <a wire:navigate href="{{ route('admin.kamar') }}" class="nav-link">
@@ -46,7 +46,7 @@
                 <span class="nav-badge" x-text="pendingPayments"></span>
             </a>
         </div>
-        
+
         <div class="nav-section">LAINNYA</div>
         <div class="nav-item">
             <a wire:navigate href="{{ route('admin.settings') }}" class="nav-link">
@@ -66,8 +66,8 @@
                 <span class="nav-label">Bantuan</span>
             </a>
         </div>
-        
+
         <div class="sidebar-divider"></div>
-        
+
     </nav>
 </aside>
