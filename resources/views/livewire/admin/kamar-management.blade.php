@@ -4,172 +4,104 @@
             <h3 class="table-title">Daftar kamar</h3>
             <button class="status-badge status-paid" onclick="showModal('modalCreateKamar')">Tambah Kamar</button>
         </div>
+
         <div class="table-wrapper">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Nama</th>
-                        <th>Kamar</th>
-                        <th>Jumlah</th>
-                        <th>Tanggal</th>
+                        <th>Nomor</th> <th>Nama Kamar</th>
+                        <th>Fasilitas</th>
                         <th>Status</th>
+                        <th>Harga (3 Bln)</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>#001</td>
-                        <td>Budi Santoso</td>
-                        <td>101</td>
-                        <td>Rp 1,200,000</td>
-                        <td>15 Jan 2024</td>
-                        <td><span class="status-badge status-paid">Lunas</span></td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action" @click="viewPayment(1)"><i class="fas fa-eye"></i></button>
-                                <button class="btn-action" @click="printReceipt(1)"><i
-                                        class="fas fa-print"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>#002</td>
-                        <td>Sari Dewi</td>
-                        <td>205</td>
-                        <td>Rp 1,500,000</td>
-                        <td>14 Jan 2024</td>
-                        <td><span class="status-badge status-pending">Pending</span></td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action" @click="approvePayment(2)"><i
-                                        class="fas fa-check"></i></button>
-                                <button class="btn-action" @click="viewPayment(2)"><i class="fas fa-eye"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>#003</td>
-                        <td>Rudi Hartono</td>
-                        <td>103</td>
-                        <td>Rp 1,200,000</td>
-                        <td>13 Jan 2024</td>
-                        <td><span class="status-badge status-paid">Lunas</span></td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action" @click="viewPayment(3)"><i class="fas fa-eye"></i></button>
-                                <button class="btn-action" @click="printReceipt(3)"><i
-                                        class="fas fa-print"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>#004</td>
-                        <td>Maya Sari</td>
-                        <td>302</td>
-                        <td>Rp 1,800,000</td>
-                        <td>12 Jan 2024</td>
-                        <td><span class="status-badge status-cancelled">Batal</span></td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action" @click="viewPayment(4)"><i class="fas fa-eye"></i></button>
-                                <button class="btn-action" @click="reprocessPayment(4)"><i
-                                        class="fas fa-redo"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
+                    </tbody>
             </table>
         </div>
+
         <div id="modalCreateKamar" class="modal-overlay">
             <div class="modal-container">
                 <div class="form-header">
                     <h2 style="margin:0;">Tambah Kamar Kost</h2>
-                    <button  class="btn-close" onclick="hideModal('modalCreateKamar')">&times;</button>
+                    <button class="btn-close" >&times;</button>
                 </div>
 
                 <form wire:submit.prevent="store">
+                    @csrf
                     <div class="form-grid">
                         <div class="form-group">
                             <label class="form-label">Nomor Kamar</label>
-                            <input type="text" name="nomor_kamar" class="form-input" placeholder="Cth: A-01">
-                            @error('number')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
+                            <input type="text" wire:model="number" name="number" class="form-input" placeholder="Cth: A-01">
+                            @error('number') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Nama / Tipe Kamar</label>
-                            <input type="text" name="nama_kamar" class="form-input"   placeholder="Cth: Kamar Standard">
-                            @error('name')
-                                <span class="text-alert">{{ $message }}</span>
-                            @enderror
+                            <input type="text" wire:model="name" name="name" class="form-input" placeholder="Cth: Kamar Standard">
+                            @error('name') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Status</label>
-                            <select name="status" class="form-select">
+                            <select wire:model="status" name="status" class="form-select">
+                                <option value="">Pilih Status</option>
                                 <option value="tersedia">Tersedia</option>
                                 <option value="terisi">Tidak tersedia</option>
+                                <option value="perbaikan">Dalam Perbaikan</option>
                             </select>
-                            @error('status')
-                                <span class="text-alert">{{ $message }}</span>
-                            @enderror
+                            @error('status') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Fasilitas</label>
-                            <input type="text" name="fasilitas" class="form-input"  placeholder="Cth: WiFi, AC, Kamar Mandi Dalam">
-                            @error('facility')
-                                <span class="text-alert">{{ $message }}</span>
-                            @enderror
+                            <input wire:model="facility" name="facility" type="text" class="form-input" placeholder="Cth: WiFi, AC">
+                            @error('facility') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Harga 3 Bulan</label>
-                            <input type="number" name="harga_3bulan" class="form-input" placeholder="0">
-                            @error('harga3bulan')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
+                            <input wire:model="harga3bulan" name="harga3bulan" type="number" class="form-input" placeholder="0">
+                            @error('harga3bulan') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Harga 6 Bulan</label>
-                            <input type="number" name="harga_6bulan" class="form-input" placeholder="0">
-                            @error('harga6bulan')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
+                            <input type="number" wire:model="harga6bulan" name="harga6bulan" class="form-input" placeholder="0">
+                            @error('harga6bulan') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group full-width">
                             <label class="form-label">Harga 1 Tahun</label>
-                            <input type="number" name="harga_1tahun" class="form-input" placeholder="0">
-                            @error('harga1tahun')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
+                            <input type="number" wire:model="harga1tahun" name="harga1tahun" class="form-input" placeholder="0">
+                            @error('harga1tahun') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group full-width">
                             <label class="form-label">Foto Kamar</label>
-                            <input type="file" name="foto" class="form-input" accept="image/*">
-                            @error('image')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
+                            <input type="file" wire:model="image" name="image" class="form-input" accept="image/*">
+
+                            <div wire:loading wire:target="image" style="color: blue; font-size: 12px;">Sedang mengupload...</div>
+                            @error('image') <span class="text-error">{{ $message }}</span> @enderror
+
+                            @if ($image)
+                                <img src="{{ $image->temporaryUrl() }}" width="100" style="margin-top:10px; border-radius:5px;">
+                            @endif
                         </div>
 
                         <div class="form-group full-width">
                             <label class="form-label">Deskripsi</label>
-                            <textarea name="description" rows="4" class="form-textarea" placeholder="Masukkan detail deskripsi kamar..."></textarea>
-                            @error('description')
-                                <span class="text-error">{{ $message }}</span>
-                            @enderror
+                            <textarea wire:model="description" name="description" rows="4" class="form-textarea" placeholder="Detail deskripsi..."></textarea>
+                            @error('description') <span class="text-error">{{ $message }}</span> @enderror
                         </div>
                     </div>
 
                     <div class="form-actions">
-                        <button type="button" onclick="hideModal('modalCreateKamar')"
-                            class="btn btn-secondary">Batal</button>
-                        <button type="submit" class="btn btn-primary">Simpan Data</button>
+                        <button type="submit"  class="btn btn-primary">
+                            <span wire:loading.remove>Simpan Data</span>
+                            <span wire:loading>Menyimpan...</span>
+                        </button>
                     </div>
                 </form>
             </div>

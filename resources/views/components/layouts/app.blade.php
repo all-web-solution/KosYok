@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Alpine.js untuk simulasi Livewire -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @livewireStyles
     <style>
         :root {
             --primary: #4f46e5;
@@ -1916,13 +1917,9 @@ document.addEventListener('click', function (event) {
 });
 
 
-    document.addEventListener('livewire:initialized', () => {
-       @this.on('close-modal', (event) => {
-           // Panggil fungsi hideModal yang sudah kamu buat sebelumnya
-           hideModal('modalCreateKamar'); // Sesuaikan ID modal kamu
-       });
-    });
+
 
 </script>
+@livewireScripts
 </body>
 </html>

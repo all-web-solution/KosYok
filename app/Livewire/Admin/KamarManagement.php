@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 
 class KamarManagement extends Component
 {
+    use WithFileUploads;
     public $name;
     public $number;
     public $status;
@@ -18,6 +19,17 @@ class KamarManagement extends Component
     public $harga1tahun;
     public $image;
     public $description;
+    public $showModal = false;
+
+public function openModal()
+{
+    $this->showModal = true;
+}
+
+public function closeModal()
+{
+    $this->showModal = false;
+}
     public function render()
     {
         return view('livewire.admin.kamar-management',[
@@ -25,40 +37,31 @@ class KamarManagement extends Component
         ]);
     }
 
-    public function store(){
-        $validatedData = $this->validate([
-            'number' => 'required|unique:kamars,nomor_kamar', // Pastikan 'kamars' nama tabel & 'nomor_kamar' nama kolom
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'facility' => 'required|string',
-            'status' => 'required|in:tersedia,terisi,perbaikan', // Sesuaikan enum/pilihan status
-            'harga3bulan' => 'required|numeric',
-            'harga6bulan' => 'required|numeric',
-            'harga1bulan' => 'required|numeric',
-            'image' => 'required|image|max:2048', // Maksimal 2MB
-        ], [
-            // Custom Error Messages (Opsional)
-            'number.unique' => 'Nomor kamar sudah terdaftar.',
-            'image.max' => 'Ukuran foto tidak boleh lebih dari 2MB.',
-        ]);
-        $imagePath = null;
-        if ($this->image) {
-            // Gambar akan disimpan di storage/app/public/kamar-images
-            $imagePath = $this->image->store('kamar-images', 'public');
-        }
-        Kamar::create([
-        'nomor_kamar' => $this->number,
-        'nama_kamar' => $this->name,
-        'deskripsi' => $this->description,
-        'fasilitas' => $this->facility,
-        'harga_3bulan' => $this->harga3bulan,
-        'harga_6bulan' => $this->harga6bulan,
-        'harga_1tahun' => $this->harga1tahun,
-        'status' => $this->status,
-        'foto' => $imagePath
-        ]);
-        $this->reset();
-        session()->flash('message', 'Data kamar berhasil ditambahkan.');
-        $this->dispatch('close-modal');
-    }
+    public function store()
+{
+    // $this->validate();
+
+    // $imagePath = null;
+    // if ($this->image) {
+    //     $imagePath = $this->image->store('kamar', 'public');
+    // }
+
+    // Kamar::create([
+    //     'nomor_kamar' => $this->number,
+    //     'nama_kamar' => $this->name,
+    //     'status' => $this->status,
+    //     'fasilitas' => $this->facility,
+    //     'harga_3bulan' => $this->harga3bulan,
+    //     'harga_6bulan' => $this->harga6bulan,
+    //     'harga_1tahun' => $this->harga1tahun,
+    //     'foto' => $imagePath,
+    //     'deskripsi' => $this->description,
+    // ]);
+
+    // $this->reset();
+    // $this->dispatch('close-modal');
+
+    dd("masuk store");
+}
+
 }
