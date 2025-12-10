@@ -28,8 +28,7 @@
                     <button class="btn-close" onclick="hideModal('modalCreateKamar')">&times;</button>
                 </div>
 
-                <form wire:submit.prevent="store">
-                    @csrf
+                <form >
                     <div class="form-grid">
                         <div class="form-group">
                             <label class="form-label">Nomor Kamar</label>
@@ -98,9 +97,8 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit"  class="btn btn-primary">
+                        <button  class="btn btn-primary">
                             <span wire:loading.remove>Simpan Data</span>
-                            <span wire:loading>Menyimpan...</span>
                         </button>
                     </div>
                 </form>

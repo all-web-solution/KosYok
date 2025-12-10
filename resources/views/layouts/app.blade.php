@@ -40,37 +40,37 @@
 
             <nav class="p-4 space-y-2">
                 <a href="{{ route('admin.dashboard') }}"
-                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.dashboard') ? 'bg-gray-700' : '' }}">
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.dashboard') ? 'bg-gray-700' : '' }}" wire:navigate>
                     <i class="fas fa-chart-bar w-5"></i>
                     <span>Dashboard</span>
                 </a>
 
                 <a href="{{ route('admin.kamars') }}"
-                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.kamars') ? 'bg-gray-700' : '' }}">
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.kamars') ? 'bg-gray-700' : '' }}" wire:navigate>
                     <i class="fas fa-door-closed w-5"></i>
                     <span>Kamar</span>
                 </a>
 
                 <a href="{{ route('admin.bookings') }}"
-                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.bookings') ? 'bg-gray-700' : '' }}">
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.bookings') ? 'bg-gray-700' : '' }}" wire:navigate>
                     <i class="fas fa-calendar-check w-5"></i>
                     <span>Booking</span>
                 </a>
 
                 <a href="{{ route('admin.payments') }}"
-                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.payments') ? 'bg-gray-700' : '' }}">
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.payments') ? 'bg-gray-700' : '' }}" wire:navigate>
                     <i class="fas fa-wallet w-5"></i>
                     <span>Pembayaran</span>
                 </a>
 
                 <a href="{{ route('admin.users') }}"
-                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.users') ? 'bg-gray-700' : '' }}">
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.users') ? 'bg-gray-700' : '' }}" wire:navigate>
                     <i class="fas fa-users w-5"></i>
                     <span>User</span>
                 </a>
 
                 <a href="{{ route('admin.reports') }}"
-                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.reports') ? 'bg-gray-700' : '' }}">
+                   class="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-700 {{ request()->routeIs('admin.reports') ? 'bg-gray-700' : '' }}" wire:navigate>
                     <i class="fas fa-chart-pie w-5"></i>
                     <span>Laporan</span>
                 </a>
@@ -141,6 +141,15 @@
                 notification.remove();
             }, 3000);
         });
+
+
+    document.addEventListener('livewire:initialized', () => {
+        Livewire.on('close-modal', (event) => {
+            // Panggil fungsi JS hideModal yang kamu buat sebelumnya
+            hideModal('modalCreateKamar');
+        });
+    });
+
     </script>
     @stack('scripts')
 </body>

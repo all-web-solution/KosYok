@@ -11,7 +11,7 @@
     <nav class="nav-menu">
         <div class="nav-section">NAVIGASI UTAMA</div>
         <div class="nav-item">
-            <a wire:navigate href="{{ route('dashboard') }}" class="nav-link active">
+            <a wire:navigate href="{{ route('dashboard') }}" class="nav-link active" wire:navigate>
                 <i class="fas fa-tachometer-alt nav-icon"></i>
                 <span class="nav-label">Dashboard</span>
             </a>
@@ -19,7 +19,7 @@
 
         <div class="nav-section">MANAJEMEN</div>
         <div class="nav-item">
-            <a wire:navigate href="{{ route('admin.kamar') }}" class="nav-link">
+            <a wire:navigate href="{{ route('admin.kamar') }}" class="nav-link" wire:navigate>
                 <i class="fas fa-bed nav-icon"></i>
                 <span class="nav-label">Kamar</span>
                 <span class="nav-badge" x-text="roomCount"></span>
